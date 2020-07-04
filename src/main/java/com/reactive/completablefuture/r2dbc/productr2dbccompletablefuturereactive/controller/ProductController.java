@@ -2,6 +2,7 @@ package com.reactive.completablefuture.r2dbc.productr2dbccompletablefuturereacti
 
 
 import com.reactive.completablefuture.r2dbc.productr2dbccompletablefuturereactive.model.Product;
+import com.reactive.completablefuture.r2dbc.productr2dbccompletablefuturereactive.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.r2dbc.core.DatabaseClient;
 import org.springframework.http.HttpStatus;
@@ -59,6 +60,13 @@ public class ProductController {
     public CompletableFuture<Product> getByName(@PathVariable String name) {
         System.out.println("all invoked");
         return repository.findOneByName(name);
+    }
+
+    @Async
+    @GetMapping("/id/{id}")
+    public CompletableFuture<Product> getById(@PathVariable String id) {
+        System.out.println("findById invoked");
+        return repository.findById(id);
     }
 
     @Async

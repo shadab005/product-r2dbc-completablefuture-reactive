@@ -1,4 +1,4 @@
-package com.reactive.completablefuture.r2dbc.productr2dbccompletablefuturereactive.controller;
+package com.reactive.completablefuture.r2dbc.productr2dbccompletablefuturereactive.repository;
 import com.reactive.completablefuture.r2dbc.productr2dbccompletablefuturereactive.model.Product;
 import org.springframework.data.r2dbc.repository.Query;
 import org.springframework.data.r2dbc.repository.R2dbcRepository;
