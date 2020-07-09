@@ -32,8 +32,7 @@ public class ProductController {
     public CompletableFuture<Product> getProduct() {
         System.out.println("getProduct invoked");
         Product p = new Product(null, "testName", 100.00);
-        //repository.save(p);
-
+        repository.save(p);
         return CompletableFuture.completedFuture(p);
     }
 
